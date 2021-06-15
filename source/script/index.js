@@ -8,6 +8,7 @@ const volumeBtn =document.getElementById('volumeBtn');
 const volumebar = document.getElementById('volumebar');
 const volumePanel = document.getElementById('volume-control');
 const volumeValue = document.getElementById('volume-shadow');
+const volumeShadow = document.getElementById('volume-shadow');
 
 let showVolume = false;
 
@@ -61,8 +62,10 @@ seekBar.addEventListener("input", () => {
 
   volumePanel.addEventListener('mouseenter', () => {
         volumebar.style.opacity = 1
+        volumeShadow.style.opacity =1
   })
 
   volumePanel.addEventListener('mouseout', () => {
     volumebar.style.opacity = 0
+    volumeShadow.style.opacity = 0
 })
