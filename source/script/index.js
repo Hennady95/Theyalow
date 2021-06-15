@@ -7,6 +7,7 @@ const timeline = document.getElementById('timeline');
 const volumeBtn =document.getElementById('volumeBtn');
 const volumebar = document.getElementById('volumebar');
 const volumePanel = document.getElementById('volume-control');
+const volumeValue = document.getElementById('volume-shadow');
 
 let showVolume = false;
 
@@ -31,7 +32,7 @@ smallPLayBtn.addEventListener('click', event => {
     }
 })
 
-seekBar.addEventListener("oninput", () => {
+seekBar.addEventListener("input", () => {
     var time = videoPLayer.duration * (seekBar.value / 100);
     videoPLayer.currentTime = time;
     timeline.style.width = `${404 / videoPLayer.duration * videoPLayer.currentTime}px`;
@@ -55,6 +56,7 @@ seekBar.addEventListener("oninput", () => {
 
   volumebar.addEventListener('input', () => {
     videoPLayer.volume = volumebar.value / 100;
+    volumeValue.style.height = `${ 70 / 100 * volumebar.value}px`;
   })
 
   volumePanel.addEventListener('mouseenter', () => {

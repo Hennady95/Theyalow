@@ -182,7 +182,6 @@ header {
 }
 
 .header-slyder_player {
-    //background: url("../img/player_background.png") center / cover no-repeat;
     overflow: hidden;
 }
 
@@ -243,7 +242,6 @@ header {
     height: 12px;
     -webkit-appearance: none;
     cursor: pointer;  
-    border-radius: 1.3px;
   }
 
   #seekBar::-webkit-slider-thumb { // 
@@ -252,6 +250,8 @@ header {
     width: 3px;
     cursor: pointer;
   }
+
+
 
 .timeline-container {
     position: absolute;
@@ -271,12 +271,50 @@ header {
 
 .volume-line {
     position: absolute;
-    right: 0;
-    bottom: 75px;
+    right: -1px;
+    bottom: 78px;
     transform: rotate(270deg);
     width: 70px;
     height: 12px;
     opacity: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.volume-shadow {
+    position: absolute;
+    right: 28px;
+    bottom: 47px;
+    width: 12px;
+    height: 19px;
+    background-color: rgba(245, 197, 6, 0.6);
+    border-radius: 5px;
+}
+
+#volumebar {
+	-webkit-appearance: none;
+	height: 10px;
+    background-color: rgba(245, 197, 6, 0.3);
+    border-radius: 5px;
+}
+#volumebar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	box-sizing: content-box;
+    height: 12px;
+    width: 1px;
+}
+#volumebar::-moz-range-thumb {
+    height: 12px;
+    width: 1px;
+}
+#volumebar::-webkit-slider-runnable-track {
+    border-radius: 5px;
+}
+
+#volumebar::-ms-track {
+    height: 12px;
+    width: 70px;
+    background-color: turquoise;
 }
 
 .volume-control {
