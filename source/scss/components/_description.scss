@@ -1,0 +1,81 @@
+.descritpion {
+    padding: 47px 142px;
+    background-color: #4C4C4C;
+    box-shadow: inset -2px -3px 8px 2px #000000;
+}
+
+.descritpion .main-section_title {
+    color: #F5C506;
+    margin-bottom: 57px;
+}
+
+.descrption-container {
+    display: flex;
+    justify-content: center;
+}
+
+.device-image:nth-child(1) {
+    position: relative;
+    margin: 0 12px;
+    height: 255px;
+    width: 323px;
+    background: url('../img/pc_image.png') center  no-repeat;
+    background-size: 100%;
+}
+
+.device-image:nth-child(1)::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    height: 117px;
+    top: -44px;
+    left: -21px;
+    content: 'Its 100% Free';
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: #F5C506;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.device-image:nth-child(2) {
+    margin: 42px 12px 40px;
+    height: 173px;
+    width: 129px;
+    background: url('../img/tablet_image.png') center  no-repeat;
+    background-size: 100%;
+}
+
+.device-image:nth-child(3) {
+    margin: 150px 12px 40px;
+    height: 64px;
+    width: 39px;
+    background: url('../img/phone_image.png') center  no-repeat;
+    background-size: 100%;
+}
+
+.description_list {
+    width: 345px;
+    margin-left: 79px;
+    color: #A9A9A7;
+}
+
+.description_list > li {
+    position: relative;
+    margin: 13px 0;
+    font-size: 22px;
+}
+
+.description_list > li::before {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    top: 3px;
+    left: -30px;
+    border-radius: 50%;
+    background-color: #F5C506;
+}

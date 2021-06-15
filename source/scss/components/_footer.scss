@@ -1,0 +1,19 @@
+footer {
+    padding: 6px 142px;
+    background-color: #4C4C4C;
+}
+
+footer .logo-image-container > img{
+    width: 55px;
+    height: 55px;
+}
+
+footer .logo-image-container::before {
+    width: 55px;
+    height: 55px;
+}
+
+footer .logo-title {
+    margin-left: 9px;
+    font-size: 29px;
+}

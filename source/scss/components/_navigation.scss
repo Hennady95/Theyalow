@@ -1,0 +1,37 @@
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 2px #000000;
+}
+
+.navigation-btn {
+    position: relative;
+    height: 213px;
+    width: 338px;
+    border-left: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.navigation-btn:nth-child(1) {
+    background: url('../img/design_icon.png') center 40% no-repeat;
+}
+
+.navigation-btn:nth-child(2) {
+    background: url('../img/customise_icon.png') center 40% no-repeat;
+}
+
+.navigation-btn:nth-child(3) {
+    background: url('../img/free_icon.png') center 40% no-repeat;
+    border-right: 1px solid rgba(0,0,0,0.1);;
+}
+
+.navigation-btn > p {
+    position: absolute;
+    width: 100%;
+    bottom: 37px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 27px;
+    text-align: center;
+    color: #000000;
+}
