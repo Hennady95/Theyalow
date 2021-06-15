@@ -173,7 +173,6 @@ header {
     position: relative;
     width: 549px;
     height: 327px;
-    position: relative;
 }
 
 .video-container video {
@@ -270,10 +269,28 @@ header {
     background-color:#F5C506;
 }
 
+.volume-line {
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+    transform: rotate(270deg);
+    width: 70px;
+    height: 12px;
+    opacity: 0;
+}
+
+.volume-control {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    bottom: 0px;
+}
+
 .volume-btn {
     position: absolute;
-    right: 19px;
-    bottom: 27px;
+    right: 25px;
+    bottom: 28px;
     width: 16px;
     height: 16px;
     background: url('../img/volume_icon.png');
