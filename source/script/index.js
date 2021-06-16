@@ -1,7 +1,6 @@
 const videoPLayer = document.getElementById('video');
 
 const bigPLayBtn = document.getElementById('big-play');
-const smallPLayBtn = document.getElementById('small-play');
 const seekBar = document.getElementById('seekBar');
 const timeline = document.getElementById('timeline');
 const volumeBtn =document.getElementById('volumeBtn');
@@ -9,28 +8,36 @@ const volumebar = document.getElementById('volumebar');
 const volumePanel = document.getElementById('volume-control');
 const volumeValue = document.getElementById('volume-shadow');
 const volumeShadow = document.getElementById('volume-shadow');
+const bigPlayShadow = document.getElementById('video-shadow');
+
+const videoContainer = document.querySelector('.video-container'); 
 
 let showVolume = false;
+let lastVolumeValue = 0;
 
-bigPLayBtn.addEventListener('click', event => {
-    event.preventDefault();
-    if(videoPLayer.paused) {
+videoContainer.addEventListener('click', event => {
+  event.preventDefault();
+  if(event.target.className === 'video-shadow' || event.target.className === 'big-play-btn' || event.target.className === 'mini-play-btn') {
+      if(videoPLayer.paused) {
         videoPLayer.play();
+        bigPlayShadow.style.opacity = 0;
     } else {
         videoPLayer.pause();
+        bigPlayShadow.style.opacity = 1;
     }
-    bigPLayBtn.style.opacity = 0;
-})
-
-smallPLayBtn.addEventListener('click', event => {
-    event.preventDefault();
-    if(videoPLayer.paused) {
-        videoPLayer.play();
-        bigPLayBtn.style.opacity = 0;
+  }
+  if(event.target.className === 'volume-btn') {
+    if (videoPLayer.muted == false) {
+      videoPLayer.muted = true;
+      volumeBtn.style.background = "url('../source/img/close_volume_icon.png')";
+      lastVolumeValue = volumebar.value;
+      volumeValue.style.height = '0px';
     } else {
-        videoPLayer.pause();
-        bigPLayBtn.style.opacity = 0.7;
+      videoPLayer.muted = false;
+      volumeBtn.style.background = "url('../source/img/volume_icon.png')";
+      volumeValue.style.height = `${70 / 100 * lastVolumeValue}px`;
     }
+  }
 })
 
 seekBar.addEventListener("input", () => {
@@ -44,16 +51,6 @@ seekBar.addEventListener("input", () => {
     seekBar.value = value;
     timeline.style.width = `${ 404 / videoPLayer.duration * videoPLayer.currentTime}px`;
   });
-
-  volumeBtn.addEventListener('click', () => {
-    if (videoPLayer.muted == false) {
-        videoPLayer.muted = true;
-        muteButton.innerHTML = "Unmute";
-      } else {
-        videoPLayer.muted = false;
-        muteButton.innerHTML = "Mute";
-      }
-  })
 
   volumebar.addEventListener('input', () => {
     videoPLayer.volume = volumebar.value / 100;
