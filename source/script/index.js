@@ -29,12 +29,12 @@ videoContainer.addEventListener('click', event => {
   if(event.target.className === 'volume-btn') {
     if (videoPLayer.muted == false) {
       videoPLayer.muted = true;
-      volumeBtn.style.background = "url('../source/img/close_volume_icon.png')";
+      volumeBtn.style.background = "url('./source/img/close_volume_icon.png')";
       lastVolumeValue = volumebar.value;
       volumeValue.style.height = '0px';
     } else {
       videoPLayer.muted = false;
-      volumeBtn.style.background = "url('../source/img/volume_icon.png')";
+      volumeBtn.style.background = "url('./source/img/volume_icon.png')";
       volumeValue.style.height = `${70 / 100 * lastVolumeValue}px`;
     }
   }
