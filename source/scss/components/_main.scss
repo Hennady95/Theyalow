@@ -2,7 +2,6 @@ main {
     position: relative;
     height: 509px;
     padding: 42px 142px 21px;
-    //background: url('../img/main_background.png') center no-repeat;
     background: rgba(246, 205, 39, 1);
     background-image:
     linear-gradient(45deg,rgba(245, 197, 7, .8) 25%, transparent 0,transparent 75%, rgba(245, 197, 7, .8) 0),
@@ -31,6 +30,31 @@ main {
 
 .news-slyder {
     position: relative;
+    display: flex;
+    padding-bottom: 15px;
+    flex-direction: row;
+    max-width: 1016px;
+    overflow-x: scroll;
+}
+
+.news-slyder::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.news-slyder::-webkit-scrollbar-track {
+    height: 80%;
+    border-radius: 10px;
+    background-color: rgba(251, 230, 150, .6);
+}
+ 
+.news-slyder::-webkit-scrollbar-thumb {
+    background-color: #EC9E03;
+    border-radius: 10px;
+}
+
+.item-container {
+    width: 1016px;
+    margin: 0 20px 0 0;
 }
 
 .news-slyder_item {
@@ -114,14 +138,4 @@ main > .timeline_shadow {
     bottom: 22px;
     left: 192px;
     background-color: #FBE696;
-}
-
-.scroll {
-    position: absolute;
-    top: 0;
-    left: 280px;
-    width: 198px;
-    height: 100%;
-    background-color: #EC9E03;
-    border-radius: 5px;
 }

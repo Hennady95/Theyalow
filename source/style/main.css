@@ -403,6 +403,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: italic;
   font-size: 41px;
@@ -850,6 +851,38 @@ main {
 
 .news-slyder {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 1016px;
+  overflow-x: scroll;
+}
+
+.news-slyder::-webkit-scrollbar {
+  width: 12px;
+}
+
+.news-slyder::-webkit-scrollbar-track {
+  height: 80%;
+  border-radius: 10px;
+  background-color: rgba(251, 230, 150, 0.6);
+}
+
+.news-slyder::-webkit-scrollbar-thumb {
+  /* border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+  background-color: #EC9E03;
+  border-radius: 10px;
+}
+
+.item-container {
+  width: 1016px;
+  margin: 0 20px 0 0;
 }
 
 .news-slyder_item {
@@ -944,16 +977,6 @@ main > .timeline_shadow {
   bottom: 22px;
   left: 192px;
   background-color: #FBE696;
-}
-
-.scroll {
-  position: absolute;
-  top: 0;
-  left: 280px;
-  width: 198px;
-  height: 100%;
-  background-color: #EC9E03;
-  border-radius: 5px;
 }
 
 .descritpion {
