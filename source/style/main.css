@@ -905,13 +905,14 @@ main {
 }
 
 .new-slyder_player {
+  position: relative;
   width: 315px;
   height: 233px;
   background: url("../img/news_player.png") center no-repeat;
 }
 
 .new-slyder_player > .big-play-btn {
-  top: calc(50% - 68px);
+  top: calc(50%-34);
 }
 
 .twitter {
